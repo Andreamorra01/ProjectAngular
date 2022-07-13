@@ -15,7 +15,7 @@ export class DogService {
 
   getConfig() {
     return this.http.get<any>(this.configUrl).pipe(
-      map((res)=>res.status)
+      map((res)=>res)
     );
   }
 }

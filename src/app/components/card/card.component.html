@@ -1,5 +1,5 @@
 <div class="card" style="width: 18rem">
-  <img class="card-img-top" [src]="data.message" alt="Card image cap" />
+  <img class="card-img-top" [src]="(observable | async).message" alt="Card image cap" />
   <div class="card-body">
     <app-child [(data)]="data.status"></app-child>
     <p class="card-text">
@@ -9,7 +9,7 @@
       {{ euro | currency:"USD"}} <br>
       {{ euro | currency:"CAD"}} <br>
       {{ fraseTre | slice:2:7 }} <br>
-      {{ observable | async }}
+      {{(observable | async).status}}
     </p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>

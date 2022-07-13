@@ -15,6 +15,7 @@ export class CardComponent implements OnInit {
   euro : number = 200
   fraseTre : string = "Hello world"
   observable!:Observable<any>;
+  
 
   constructor(private dogService: DogService) { }
 
