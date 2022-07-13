@@ -1,0 +1,15 @@
+<h1> {{user}} </h1>
+<div *ngIf = "numero>9">
+    <p>{{numero}} è maggiore di 9</p>
+</div>
+<h1>{{totaleEuro | currency}}</h1>
+
+<button (click)= "showHidden()" >Mostra/Nascondi</button>
+<div *ngIf = "show">
+    <p ngClass="big">
+        Giorno e ora corrente: {{today|date : "dd/MM/yyy HH:mm:ss"}}
+    </p>
+    </div>
+
+
+
