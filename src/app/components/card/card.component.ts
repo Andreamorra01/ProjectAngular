@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { map, Observable } from 'rxjs';
 import { DogService } from 'src/app/services/dog.service';
 
 @Component({
@@ -13,11 +14,13 @@ export class CardComponent implements OnInit {
   fraseDue : string = "QUESTO TEST SARA' PICCOLO"
   euro : number = 200
   fraseTre : string = "Hello world"
+  observable!:Observable<any>;
 
   constructor(private dogService: DogService) { }
 
   ngOnInit(): void {
     // this.showConfig();
+    this.observable=this.dogService.getConfig()
   }
 
   showConfig() {
