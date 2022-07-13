@@ -9,10 +9,15 @@ import { DogService } from 'src/app/services/dog.service';
 export class CardComponent implements OnInit {
 
   data : any = {};
+  fraseUno : string = "Questa è una prova"
+  fraseDue : string = "QUESTO TEST SARA' PICCOLO"
+  euro : number = 200
+  fraseTre : string = "Hello world"
+
   constructor(private dogService: DogService) { }
 
   ngOnInit(): void {
-    this.showConfig();
+    // this.showConfig();
   }
 
   showConfig() {
@@ -22,6 +27,10 @@ export class CardComponent implements OnInit {
         console.log(res);
 
       });
+  }
+
+  getDogService() {
+    return this.dogService.getConfig()
   }
 
 

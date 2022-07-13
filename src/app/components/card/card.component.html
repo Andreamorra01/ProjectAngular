@@ -3,8 +3,13 @@
   <div class="card-body">
     <app-child [(data)]="data.status"></app-child>
     <p class="card-text">
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+      {{ fraseUno | uppercase}} <br>
+      {{ fraseDue | lowercase }} <br>
+      {{ euro | currency:"EUR"}} <br>
+      {{ euro | currency:"USD"}} <br>
+      {{ euro | currency:"CAD"}} <br>
+      {{ fraseTre | slice:2:7 }} <br>
+      {{ getDogService() | async }}
     </p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
